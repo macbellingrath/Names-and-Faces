@@ -11,10 +11,16 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var people = [Person]()
-
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let savedPeople = defaults.objectForKey("people") as? NSData {
+            people = NSKeyedUnarchiver.unarchiveObjectWithData(savedPeople) as! [Person]
+            
+        }
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addNewPerson")
     }
@@ -58,6 +64,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             person.name = newName.text!
             
             self.collectionView.reloadData()
+            self.save()
             
         })
     presentViewController(ac, animated: true, completion: nil)
@@ -87,6 +94,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let person = Person(name: "Unkown", image: imageName)
         people.append(person)
         collectionView.reloadData()
+        self.save()
         
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -101,6 +109,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as [String]
         let documentsDirectory = paths[0]
         return documentsDirectory
+    }
+    
+    func save() {
+        let savedData = NSKeyedArchiver.archivedDataWithRootObject(people)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(savedData, forKey: "people")
     }
 
 }

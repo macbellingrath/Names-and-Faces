@@ -13,7 +13,7 @@
 		E6218F571B6A59BF00B58E3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6218F561B6A59BF00B58E3F /* Assets.xcassets */; };
 		E6218F5A1B6A59BF00B58E3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6218F581B6A59BF00B58E3F /* LaunchScreen.storyboard */; };
 		E6218F621B6A5BC500B58E3F /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6218F611B6A5BC500B58E3F /* PersonCell.swift */; };
-		E6218F641B6A679000B58E3F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6218F631B6A679000B58E3F /* Person.swift */; };
+		E6ADAF181B6D020E00B9195F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ADAF171B6D020E00B9195F /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +25,8 @@
 		E6218F591B6A59BF00B58E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6218F5B1B6A59BF00B58E3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6218F611B6A5BC500B58E3F /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
-		E6218F631B6A679000B58E3F /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		E6218F651B6A6F7300B58E3F /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		E6ADAF171B6D020E00B9195F /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +62,12 @@
 			children = (
 				E6218F4F1B6A59BF00B58E3F /* AppDelegate.swift */,
 				E6218F611B6A5BC500B58E3F /* PersonCell.swift */,
+				E6ADAF171B6D020E00B9195F /* Person.swift */,
 				E6218F511B6A59BF00B58E3F /* ViewController.swift */,
 				E6218F531B6A59BF00B58E3F /* Main.storyboard */,
 				E6218F561B6A59BF00B58E3F /* Assets.xcassets */,
 				E6218F581B6A59BF00B58E3F /* LaunchScreen.storyboard */,
 				E6218F5B1B6A59BF00B58E3F /* Info.plist */,
-				E6218F631B6A679000B58E3F /* Person.swift */,
 			);
 			path = "Names and Faces";
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 			files = (
 				E6218F621B6A5BC500B58E3F /* PersonCell.swift in Sources */,
 				E6218F521B6A59BF00B58E3F /* ViewController.swift in Sources */,
-				E6218F641B6A679000B58E3F /* Person.swift in Sources */,
+				E6ADAF181B6D020E00B9195F /* Person.swift in Sources */,
 				E6218F501B6A59BF00B58E3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +297,7 @@
 				E6218F601B6A59BF00B58E3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
